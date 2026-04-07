@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -14,247 +13,244 @@
   --wine:#5C1A1A;--wine2:#7A2424;--wine3:#3D1010;
   --wine-light:rgba(92,26,26,0.08);--wine-mid:rgba(92,26,26,0.15);
   --text:#2A1A1A;--muted:#8C7070;--border:rgba(92,26,26,0.12);
-  --border-strong:rgba(92,26,26,0.25);
-  --r:12px;--card-r:16px;
+  --border-strong:rgba(92,26,26,0.25);--r:12px;--card-r:16px;
 }
 body{font-family:'Jost',sans-serif;background:var(--cream3);color:var(--text);min-height:100vh;overflow-x:hidden}
 
-/* ── LOGIN ── */
-#login-screen{position:fixed;inset:0;background:var(–wine3);display:flex;align-items:center;justify-content:center;z-index:999;padding:24px}
+/* LOGIN */
+#login-screen{position:fixed;inset:0;background:var(--wine3);display:flex;align-items:center;justify-content:center;z-index:999;padding:24px}
 #login-screen.hidden{display:none}
 .login-box{background:white;border-radius:24px;padding:40px 36px;width:100%;max-width:380px;text-align:center}
-.login-logo{font-family:‘Cormorant Garamond’,serif;font-size:36px;font-weight:700;color:var(–wine3);letter-spacing:3px;margin-bottom:4px}
-.login-sub{font-size:12px;color:var(–muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:32px}
+.login-logo{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--wine3);letter-spacing:3px;margin-bottom:4px}
+.login-sub{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:32px}
 .login-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;text-align:left}
-.login-field label{font-size:11px;font-weight:600;color:var(–wine);text-transform:uppercase;letter-spacing:1px}
-.login-field input{background:var(–cream3);border:1px solid var(–border-strong);border-radius:var(–r);padding:13px 16px;color:var(–text);font-family:‘Jost’,sans-serif;font-size:15px;outline:none;transition:border-color .2s;width:100%}
-.login-field input:focus{border-color:var(–wine)}
-.login-btn{width:100%;padding:14px;border-radius:100px;background:var(–wine);color:var(–cream2);font-family:‘Jost’,sans-serif;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:all .2s;margin-top:8px;letter-spacing:.5px;text-transform:uppercase}
-.login-btn:hover{background:var(–wine2)}
+.login-field label{font-size:11px;font-weight:600;color:var(--wine);text-transform:uppercase;letter-spacing:1px}
+.login-field input{background:var(--cream3);border:1px solid var(--border-strong);border-radius:var(--r);padding:13px 16px;color:var(--text);font-family:'Jost',sans-serif;font-size:15px;outline:none;transition:border-color .2s;width:100%}
+.login-field input:focus{border-color:var(--wine)}
+.login-btn{width:100%;padding:14px;border-radius:100px;background:var(--wine);color:var(--cream2);font-family:'Jost',sans-serif;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:all .2s;margin-top:8px;letter-spacing:.5px;text-transform:uppercase}
+.login-btn:hover{background:var(--wine2)}
 .login-btn:disabled{opacity:.5;cursor:not-allowed}
-.login-error{background:rgba(92,26,26,0.08);border:1px solid rgba(92,26,26,0.2);border-radius:10px;padding:10px 14px;font-size:13px;color:var(–wine);margin-top:12px;display:none}
+.login-error{background:rgba(92,26,26,0.08);border:1px solid rgba(92,26,26,0.2);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--wine);margin-top:12px;display:none}
 .login-error.show{display:block}
 
-/* ── NAV ── */
-nav{position:sticky;top:0;z-index:100;background:var(–wine3);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 20px;display:flex;align-items:center;gap:6px;height:58px}
-.logo-type{font-family:‘Cormorant Garamond’,serif;font-size:22px;font-weight:700;color:var(–cream);letter-spacing:2px;margin-right:auto}
-.nav-btn{padding:7px 14px;border-radius:100px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:rgba(232,224,216,0.6);font-family:‘Jost’,sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;letter-spacing:.5px;text-transform:uppercase}
-.nav-btn:hover{background:rgba(255,255,255,0.07);color:var(–cream)}
-.nav-btn.active{background:var(–cream);color:var(–wine3);border-color:transparent;font-weight:600}
-.nav-user{font-size:11px;color:rgba(232,224,216,0.5);margin-right:6px;white-space:nowrap}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--wine3);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 16px;display:flex;align-items:center;gap:5px;height:58px}
+.logo-type{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--cream);letter-spacing:2px;margin-right:auto}
+.nav-btn{padding:7px 13px;border-radius:100px;border:1px solid rgba(232,224,216,0.35);background:rgba(255,255,255,0.07);color:rgba(232,224,216,0.85);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;letter-spacing:.5px;text-transform:uppercase}
+.nav-btn:hover{background:rgba(255,255,255,0.14);color:var(--cream);border-color:rgba(232,224,216,0.6)}
+.nav-btn.active{background:var(--cream);color:var(--wine3);border-color:transparent;font-weight:700}
+.nav-user{font-size:11px;color:rgba(232,224,216,0.55);margin-right:4px;white-space:nowrap}
 .nav-role{font-size:10px;padding:3px 8px;border-radius:100px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
 .role-admin{background:rgba(255,209,102,0.2);color:#FFD166}
 .role-supervisor{background:rgba(6,255,180,0.15);color:#06FFB4}
 .role-vendedor{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)}
-.logout-btn{padding:6px 12px;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:rgba(232,224,216,0.5);font-size:11px;cursor:pointer;font-family:‘Jost’,sans-serif;transition:all .2s}
-.logout-btn:hover{border-color:rgba(255,255,255,0.3);color:var(–cream)}
+.logout-btn{padding:6px 12px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:rgba(232,224,216,0.6);font-size:11px;cursor:pointer;font-family:'Jost',sans-serif;transition:all .2s}
+.logout-btn:hover{border-color:rgba(255,255,255,0.4);color:var(--cream)}
 
-/* ── PAGES ── */
+/* PAGES */
 .page{display:none;padding:36px 24px;max-width:960px;margin:0 auto;animation:fadeIn .3s ease}
 .page.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.page-header{margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.page-header h1{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--wine3);letter-spacing:-.5px;margin-bottom:4px}
+.page-header p{color:var(--muted);font-size:14px;font-weight:300}
 
-/* ── PAGE HEADER ── */
-.page-header{margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(–border)}
-.page-header h1{font-family:‘Cormorant Garamond’,serif;font-size:36px;font-weight:600;color:var(–wine3);letter-spacing:-.5px;margin-bottom:4px}
-.page-header p{color:var(–muted);font-size:14px;font-weight:300}
-
-/* ── ACCESS DENIED ── */
-.access-denied{text-align:center;padding:60px 24px;color:var(–muted)}
-.access-denied .icon{font-size:48px;margin-bottom:12px}
-.access-denied h3{font-family:‘Cormorant Garamond’,serif;font-size:24px;color:var(–wine3);margin-bottom:8px}
-.access-denied p{font-size:14px}
-
-/* ── UPLOAD ZONE ── */
-.upload-zone{border:1.5px dashed var(–border-strong);border-radius:var(–card-r);padding:48px 24px;text-align:center;cursor:pointer;transition:all .3s;background:white;position:relative;overflow:hidden}
-.upload-zone:hover,.upload-zone.drag{border-color:var(–wine);background:var(–wine-light)}
+/* UPLOAD ZONE */
+.upload-zone{border:1.5px dashed var(--border-strong);border-radius:var(--card-r);padding:48px 24px;text-align:center;cursor:pointer;transition:all .3s;background:white;position:relative;overflow:hidden}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--wine);background:var(--wine-light)}
 .upload-icon{font-size:40px;margin-bottom:14px;display:block}
-.upload-zone h3{font-family:‘Cormorant Garamond’,serif;font-size:22px;font-weight:600;color:var(–wine);margin-bottom:6px}
-.upload-zone p{color:var(–muted);font-size:13px}
+.upload-zone h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--wine);margin-bottom:6px}
+.upload-zone p{color:var(--muted);font-size:13px}
 
-/* ── FORMS ── */
+/* FORMS */
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
 .field{display:flex;flex-direction:column;gap:6px}
-.field label{font-size:11px;font-weight:600;color:var(–wine);text-transform:uppercase;letter-spacing:1px}
-.field input,.field select,.field textarea{background:white;border:1px solid var(–border-strong);border-radius:var(–r);padding:11px 14px;color:var(–text);font-family:‘Jost’,sans-serif;font-size:14px;outline:none;transition:border-color .2s;width:100%}
-.field input:focus,.field select:focus{border-color:var(–wine)}
+.field label{font-size:11px;font-weight:600;color:var(--wine);text-transform:uppercase;letter-spacing:1px}
+.field input,.field select{background:white;border:1px solid var(--border-strong);border-radius:var(--r);padding:11px 14px;color:var(--text);font-family:'Jost',sans-serif;font-size:14px;outline:none;transition:border-color .2s;width:100%}
+.field input:focus,.field select:focus{border-color:var(--wine)}
 .field select option{background:white}
 .field.full{grid-column:1/-1}
-.img-preview{width:100%;height:200px;object-fit:cover;border-radius:var(–card-r);margin-top:12px;display:none}
+.img-preview{width:100%;height:200px;object-fit:cover;border-radius:var(--card-r);margin-top:12px;display:none}
 .img-preview.show{display:block}
 
-/* ── BUTTONS ── */
-.btn{padding:12px 24px;border-radius:100px;font-family:‘Jost’,sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;border:none;letter-spacing:.5px;text-transform:uppercase}
-.btn-primary{background:var(–wine);color:var(–cream2)}
-.btn-primary:hover{background:var(–wine2)}
+/* BUTTONS */
+.btn{padding:12px 24px;border-radius:100px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;border:none;letter-spacing:.5px;text-transform:uppercase}
+.btn-primary{background:var(--wine);color:var(--cream2)}
+.btn-primary:hover{background:var(--wine2)}
 .btn-primary:disabled{opacity:.5;cursor:not-allowed}
-.btn-outline{background:transparent;border:1px solid var(–border-strong);color:var(–wine)}
-.btn-outline:hover{border-color:var(–wine);background:var(–wine-light)}
+.btn-outline{background:transparent;border:1px solid var(--border-strong);color:var(--wine)}
+.btn-outline:hover{border-color:var(--wine);background:var(--wine-light)}
 .btn-sm{padding:7px 14px;font-size:11px}
-.btn-ghost{background:rgba(92,26,26,0.06);color:var(–wine);border:1px solid var(–border)}
-.btn-ghost:hover{background:var(–wine-mid)}
+.btn-ghost{background:rgba(92,26,26,0.06);color:var(--wine);border:1px solid var(--border)}
+.btn-ghost:hover{background:var(--wine-mid)}
 
-/* ── PRODUCT CARDS ── */
+/* PRODUCT CARDS */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:20px}
-.product-card{background:white;border:1px solid var(–border);border-radius:var(–card-r);overflow:hidden;transition:all .25s}
-.product-card:hover{border-color:var(–border-strong);box-shadow:0 4px 20px rgba(92,26,26,0.08)}
-.product-card img{width:100%;height:150px;object-fit:cover;display:block;background:var(–cream)}
-.no-img{width:100%;height:150px;background:var(–cream);display:flex;align-items:center;justify-content:center;font-size:28px}
+.product-card{background:white;border:1px solid var(--border);border-radius:var(--card-r);overflow:hidden;transition:all .25s}
+.product-card:hover{border-color:var(--border-strong);box-shadow:0 4px 20px rgba(92,26,26,0.08)}
+.product-card img{width:100%;height:150px;object-fit:cover;display:block;background:var(--cream)}
+.no-img{width:100%;height:150px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:28px}
 .card-info{padding:12px}
-.card-code{font-size:10px;color:var(–wine);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-.card-name{font-family:‘Cormorant Garamond’,serif;font-size:16px;font-weight:600;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(–wine3)}
+.card-code{font-size:10px;color:var(--wine);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--wine3)}
 .card-row{display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}
-.card-price{font-size:15px;font-weight:600;color:var(–wine3)}
+.card-price{font-size:15px;font-weight:600;color:var(--wine3)}
 .qty-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:100px;font-size:11px;font-weight:500}
 .qty-ok{background:rgba(20,120,60,0.1);color:#146b3a}
 .qty-low{background:rgba(180,120,0,0.1);color:#8a5c00}
-.qty-out{background:rgba(92,26,26,0.1);color:var(–wine)}
+.qty-out{background:rgba(92,26,26,0.1);color:var(--wine)}
 .card-actions{display:flex;gap:6px;padding:0 12px 12px}
 
-/* ── SELLERS ── */
+/* SELLERS */
 .sellers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:20px}
-.seller-card{background:white;border:1px solid var(–border);border-radius:var(–card-r);padding:20px;transition:all .2s}
-.seller-card:hover{border-color:var(–border-strong)}
-.seller-avatar{width:46px;height:46px;border-radius:50%;background:var(–wine);display:flex;align-items:center;justify-content:center;font-family:‘Cormorant Garamond’,serif;font-weight:700;font-size:18px;color:var(–cream);flex-shrink:0}
+.seller-card{background:white;border:1px solid var(--border);border-radius:var(--card-r);padding:20px;transition:all .2s}
+.seller-card:hover{border-color:var(--border-strong)}
+.seller-avatar{width:46px;height:46px;border-radius:50%;background:var(--wine);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--cream);flex-shrink:0}
 .seller-info-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.seller-name-txt{font-family:‘Cormorant Garamond’,serif;font-size:18px;font-weight:600;color:var(–wine3)}
-.seller-role-txt{font-size:11px;color:var(–muted);text-transform:uppercase;letter-spacing:.5px}
+.seller-name-txt{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--wine3)}
+.seller-role-txt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
 .seller-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
-.stat{background:var(–cream3);border-radius:10px;padding:10px;text-align:center}
-.stat-val{font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:700;color:var(–wine)}
-.stat-label{font-size:10px;color:var(–muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
+.stat{background:var(--cream3);border-radius:10px;padding:10px;text-align:center}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--wine)}
+.stat-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
 .commission-tier{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;font-size:12px;font-weight:500;margin-bottom:10px}
-.tier-base{background:rgba(140,112,112,0.1);color:var(–muted)}
+.tier-base{background:rgba(140,112,112,0.1);color:var(--muted)}
 .tier-full{background:rgba(20,120,60,0.1);color:#146b3a}
 .tier-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px}
-.tier-badge-base{background:rgba(140,112,112,0.2);color:var(–muted)}
+.tier-badge-base{background:rgba(140,112,112,0.2);color:var(--muted)}
 .tier-badge-full{background:rgba(20,120,60,0.15);color:#146b3a}
 
-/* ── COMMISSION BOX ── */
-.commission-box{background:var(–wine-light);border:1px solid var(–border-strong);border-radius:var(–card-r);padding:20px;margin-bottom:24px}
-.commission-box h3{font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600;color:var(–wine3);margin-bottom:4px}
-.commission-box p{font-size:13px;color:var(–muted);margin-bottom:14px}
+/* COMMISSION BOX */
+.commission-box{background:var(--wine-light);border:1px solid var(--border-strong);border-radius:var(--card-r);padding:20px;margin-bottom:24px}
+.commission-box h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--wine3);margin-bottom:4px}
+.commission-box p{font-size:13px;color:var(--muted);margin-bottom:14px}
 .comm-table{width:100%;border-collapse:collapse;font-size:13px}
-.comm-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(–muted);font-weight:600;padding:0 0 10px;border-bottom:1px solid var(–border)}
-.comm-table td{padding:10px 0;border-bottom:1px solid var(–border);vertical-align:middle}
+.comm-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;padding:0 0 10px;border-bottom:1px solid var(--border)}
+.comm-table td{padding:10px 0;border-bottom:1px solid var(--border);vertical-align:middle}
 .comm-table tr:last-child td{border-bottom:none}
-.comm-amount{font-family:‘Cormorant Garamond’,serif;font-size:18px;font-weight:700;color:var(–wine)}
-.payout-btn{display:flex;align-items:center;gap:8px;background:var(–wine);color:var(–cream);padding:10px 20px;border-radius:100px;border:none;font-family:‘Jost’,sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;transition:all .2s;margin-top:14px}
-.payout-btn:hover{background:var(–wine2)}
+.comm-amount{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--wine)}
+.payout-btn{display:flex;align-items:center;gap:8px;background:var(--wine);color:var(--cream);padding:10px 20px;border-radius:100px;border:none;font-family:'Jost',sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;transition:all .2s;margin-top:14px}
+.payout-btn:hover{background:var(--wine2)}
 
-/* ── SALES ── */
+/* SALES */
 .sales-log{display:flex;flex-direction:column;gap:6px;margin-top:16px}
-.sale-item{background:white;border:1px solid var(–border);border-radius:10px;padding:11px 16px;display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:wrap}
-.sale-code{font-weight:600;color:var(–wine);font-size:11px;text-transform:uppercase;letter-spacing:.5px;min-width:80px}
-.sale-name{flex:1;color:var(–muted);min-width:100px}
-.sale-qty{font-weight:600;color:var(–wine3)}
-.sale-total{font-family:‘Cormorant Garamond’,serif;font-size:16px;font-weight:600;color:var(–wine3)}
-.sale-seller-tag{font-size:11px;color:var(–muted)}
-.sale-time{font-size:10px;color:var(–muted)}
+.sale-item{background:white;border:1px solid var(--border);border-radius:10px;padding:11px 16px;display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:wrap}
+.sale-code{font-weight:600;color:var(--wine);font-size:11px;text-transform:uppercase;letter-spacing:.5px;min-width:80px}
+.sale-name{flex:1;color:var(--muted);min-width:100px}
+.sale-qty{font-weight:600;color:var(--wine3)}
+.sale-total{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--wine3)}
+.sale-seller-tag{font-size:11px;color:var(--muted)}
+.sale-time{font-size:10px;color:var(--muted)}
 
-/* ── PROMOS ── */
+/* PROMOS */
 .promos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:20px}
-.promo-card{background:white;border:1px solid var(–border);border-radius:var(–card-r);overflow:hidden;transition:all .2s}
-.promo-card:hover{border-color:var(–border-strong)}
-.promo-card img{width:100%;height:180px;object-fit:cover;background:var(–cream)}
-.promo-no-img{width:100%;height:180px;background:var(–cream);display:flex;align-items:center;justify-content:center;font-size:32px}
+.promo-card{background:white;border:1px solid var(--border);border-radius:var(--card-r);overflow:hidden;transition:all .2s}
+.promo-card:hover{border-color:var(--border-strong)}
+.promo-card img{width:100%;height:180px;object-fit:cover;background:var(--cream)}
+.promo-no-img{width:100%;height:180px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:32px}
 .promo-info{padding:12px}
-.promo-title-text{font-family:‘Cormorant Garamond’,serif;font-size:16px;font-weight:600;color:var(–wine3);margin-bottom:3px}
-.promo-date{font-size:11px;color:var(–muted)}
-.download-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:8px;border-radius:100px;background:var(–wine-light);border:1px solid var(–border-strong);color:var(–wine);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;width:100%;font-family:‘Jost’,sans-serif;text-decoration:none}
-.download-btn:hover{background:var(–wine-mid)}
+.promo-title-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--wine3);margin-bottom:3px}
+.promo-date{font-size:11px;color:var(--muted)}
+.download-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:8px;border-radius:100px;background:var(--wine-light);border:1px solid var(--border-strong);color:var(--wine);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;width:100%;font-family:'Jost',sans-serif;text-decoration:none}
+.download-btn:hover{background:var(--wine-mid)}
 
-/* ── MODALS ── */
+/* MODALS */
 .modal-overlay{position:fixed;inset:0;background:rgba(30,10,10,0.6);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
 .modal-overlay.open{display:flex}
-.modal{background:white;border:1px solid var(–border);border-radius:var(–card-r);padding:28px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;animation:slideUp .3s ease;margin:16px}
+.modal{background:white;border:1px solid var(--border);border-radius:var(--card-r);padding:28px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;animation:slideUp .3s ease;margin:16px}
 @keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(–border)}
-.modal-title{font-family:‘Cormorant Garamond’,serif;font-size:24px;font-weight:600;color:var(–wine3)}
-.close-btn{background:var(–cream3);border:1px solid var(–border);color:var(–muted);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.close-btn:hover{border-color:var(–wine);color:var(–wine)}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--wine3)}
+.close-btn{background:var(--cream3);border:1px solid var(--border);color:var(--muted);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.close-btn:hover{border-color:var(--wine);color:var(--wine)}
 
-/* ── MISC ── */
+/* MISC */
 .search-bar{display:flex;gap:10px;margin-bottom:16px}
-.search-input{flex:1;background:white;border:1px solid var(–border-strong);border-radius:100px;padding:10px 18px;color:var(–text);font-family:‘Jost’,sans-serif;font-size:13px;outline:none;transition:all .2s}
-.search-input:focus{border-color:var(–wine)}
-.search-input::placeholder{color:var(–muted)}
+.search-input{flex:1;background:white;border:1px solid var(--border-strong);border-radius:100px;padding:10px 18px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;outline:none;transition:all .2s}
+.search-input:focus{border-color:var(--wine)}
+.search-input::placeholder{color:var(--muted)}
 .product-search{position:relative}
-.product-dropdown{position:absolute;top:100%;left:0;right:0;background:white;border:1px solid var(–border-strong);border-radius:var(–r);z-index:50;max-height:200px;overflow-y:auto;margin-top:4px;display:none;box-shadow:0 8px 24px rgba(92,26,26,0.1)}
+.product-dropdown{position:absolute;top:100%;left:0;right:0;background:white;border:1px solid var(--border-strong);border-radius:var(--r);z-index:50;max-height:200px;overflow-y:auto;margin-top:4px;display:none;box-shadow:0 8px 24px rgba(92,26,26,0.1)}
 .product-dropdown.open{display:block}
-.pd-item{padding:10px 14px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between;border-bottom:1px solid var(–border);transition:background .15s}
+.pd-item{padding:10px 14px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between;border-bottom:1px solid var(--border);transition:background .15s}
 .pd-item:last-child{border-bottom:none}
-.pd-item:hover{background:var(–cream3)}
-.pd-code{font-size:10px;color:var(–wine);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.pd-item:hover{background:var(--cream3)}
+.pd-code{font-size:10px;color:var(--wine);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
 .section-sep{display:flex;align-items:center;gap:14px;margin:32px 0 0}
-.section-sep h2{font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600;color:var(–wine3);white-space:nowrap}
-.section-sep::after{content:’’;flex:1;height:1px;background:var(–border)}
-.empty{text-align:center;padding:48px 24px;color:var(–muted)}
+.section-sep h2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--wine3);white-space:nowrap}
+.section-sep::after{content:'';flex:1;height:1px;background:var(--border)}
+.empty{text-align:center;padding:48px 24px;color:var(--muted)}
 .empty-icon{font-size:40px;margin-bottom:10px}
 .empty p{font-size:14px}
-.sale-product-preview{display:none;margin-top:14px;background:var(–cream3);border-radius:var(–r);padding:14px;align-items:center;gap:12px}
+.sale-product-preview{display:none;margin-top:14px;background:var(--cream3);border-radius:var(--r);padding:14px;align-items:center;gap:12px}
 .sale-product-preview.show{display:flex}
-.loading{display:flex;align-items:center;justify-content:center;gap:10px;padding:24px;color:var(–muted);font-size:13px}
-.spinner{width:18px;height:18px;border:2px solid var(–border);border-top-color:var(–wine);border-radius:50%;animation:spin .7s linear infinite}
+.loading{display:flex;align-items:center;justify-content:center;gap:10px;padding:24px;color:var(--muted);font-size:13px}
+.spinner{width:18px;height:18px;border:2px solid var(--border);border-top-color:var(--wine);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.toast{position:fixed;bottom:24px;right:24px;background:var(–wine3);color:var(–cream);border-radius:var(–r);padding:12px 18px;font-size:13px;z-index:9999;animation:toastIn .3s ease;display:flex;align-items:center;gap:8px;max-width:300px}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--wine3);color:var(--cream);border-radius:var(--r);padding:12px 18px;font-size:13px;z-index:9999;animation:toastIn .3s ease;display:flex;align-items:center;gap:8px;max-width:300px}
 @keyframes toastIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-@media(max-width:600px){
-nav{padding:0 10px;gap:3px}
-.nav-btn{padding:5px 8px;font-size:10px}
-.logo-type{font-size:16px}
-.nav-user{display:none}
-.page{padding:20px 14px}
-.form-grid{grid-template-columns:1fr}
-.cards-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
-.sellers-grid{grid-template-columns:1fr}
+/* GASTOS */
+.panel-card{background:white;border:1px solid var(--border);border-radius:var(--card-r);padding:24px;margin-bottom:20px}
+.panel-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--wine3);margin-bottom:4px}
+.panel-card .sub{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.list-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cream3);border-radius:10px;font-size:13px;margin-bottom:6px}
+.list-row .lname{flex:1;font-weight:500;color:var(--wine3)}
+.list-row .lmeta{color:var(--muted);font-size:12px}
+.list-row .lval{font-weight:600;color:var(--wine)}
+.list-row .ldel{background:none;border:none;cursor:pointer;color:var(--muted);font-size:14px;padding:2px 6px;transition:color .15s}
+.list-row .ldel:hover{color:var(--wine)}
+.pkg-total-bar{margin-top:12px;padding:12px;background:var(--wine-light);border-radius:10px;font-size:13px;color:var(--muted)}
+.margin-table{width:100%;border-collapse:collapse;font-size:13px}
+.margin-table th{text-align:right;padding:8px 6px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--border)}
+.margin-table th:first-child{text-align:left;padding-left:0}
+.margin-table td{padding:10px 6px;border-bottom:1px solid var(--border);vertical-align:middle;text-align:right}
+.margin-table td:first-child{text-align:left;padding-left:0}
+.margin-table tr:last-child td{border-bottom:none}
+
+@media(max-width:640px){
+  nav{padding:0 10px;gap:3px}
+  .nav-btn{padding:5px 8px;font-size:10px}
+  .logo-type{font-size:16px}
+  .nav-user{display:none}
+  .page{padding:20px 14px}
+  .form-grid{grid-template-columns:1fr}
+  .cards-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .sellers-grid{grid-template-columns:1fr}
+  .margin-table{font-size:11px}
 }
 </style>
-
 </head>
 <body>
 
-<!-- ══════════════ LOGIN ══════════════ -->
-
+<!-- LOGIN -->
 <div id="login-screen">
   <div class="login-box">
     <div class="login-logo">MÜZAY</div>
     <div class="login-sub">Sistema de inventario</div>
-    <div class="login-field">
-      <label>Nombre</label>
-      <input type="text" id="login-name" placeholder="Tu nombre" autocomplete="off">
-    </div>
-    <div class="login-field">
-      <label>Usuario / PIN</label>
-      <input type="text" id="login-pin" placeholder="Tu usuario o PIN" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()">
-    </div>
+    <div class="login-field"><label>Nombre</label><input type="text" id="login-name" placeholder="Tu nombre" autocomplete="off"></div>
+    <div class="login-field"><label>Usuario / PIN</label><input type="text" id="login-pin" placeholder="Tu usuario o PIN" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"></div>
     <button class="login-btn" id="login-btn" onclick="doLogin()">Entrar</button>
-    <div class="login-error" id="login-error">Nombre o usuario incorrecto. Verifica tus datos.</div>
+    <div class="login-error" id="login-error">Nombre o usuario incorrecto.</div>
   </div>
 </div>
 
-<!-- ══════════════ APP ══════════════ -->
-
+<!-- NAV -->
 <nav id="main-nav" style="display:none">
   <span class="logo-type">MÜZAY</span>
   <button class="nav-btn active" onclick="goto(this,'inventario')">Inventario</button>
-  <button class="nav-btn" onclick="goto(this,'vendedores')" id="nav-vendedores">Vendedores</button>
+  <button class="nav-btn" onclick="goto(this,'vendedores')">Vendedores</button>
   <button class="nav-btn" onclick="goto(this,'ventas')">Ventas</button>
   <button class="nav-btn" onclick="goto(this,'promos')">Promos</button>
+  <button class="nav-btn" id="nav-gastos" style="display:none" onclick="goto(this,'gastos')">Gastos</button>
   <span class="nav-user" id="nav-user-name"></span>
   <span class="nav-role" id="nav-role-badge"></span>
   <button class="logout-btn" onclick="doLogout()">Salir</button>
 </nav>
 
-<!-- ══ INVENTARIO ══ -->
-
+<!-- INVENTARIO -->
 <div class="page active" id="page-inventario">
-  <div class="page-header">
-    <h1>Inventario</h1>
-    <p id="inv-subtitle">Catálogo de productos</p>
-  </div>
-  <!-- Admin/Supervisor: formulario de agregar -->
+  <div class="page-header"><h1>Inventario</h1><p>Catálogo de productos MÜZAY</p></div>
   <div id="inv-admin-panel">
     <div class="upload-zone" id="dropzone" onclick="document.getElementById('prod-img').click()">
       <span class="upload-icon" id="upload-emoji">📷</span>
@@ -266,7 +262,7 @@ nav{padding:0 10px;gap:3px}
     <div class="form-grid">
       <div class="field"><label>Código</label><input type="text" id="prod-code" placeholder="ej. SKULL023" oninput="this.value=this.value.toUpperCase()"></div>
       <div class="field"><label>Nombre del producto</label><input type="text" id="prod-name" placeholder="ej. Camiseta Skull"></div>
-      <div class="field"><label>Precio ($)</label><input type="number" id="prod-price" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="field"><label>Precio de venta ($)</label><input type="number" id="prod-price" placeholder="0.00" min="0" step="0.01"></div>
       <div class="field"><label>Cantidad disponible</label><input type="number" id="prod-qty" placeholder="0" min="0"></div>
       <div class="field full"><label>Descripción (opcional)</label><input type="text" id="prod-desc" placeholder="Talla, color, material..."></div>
     </div>
@@ -282,14 +278,9 @@ nav{padding:0 10px;gap:3px}
   <div id="products-grid" class="cards-grid"></div>
 </div>
 
-<!-- ══ VENDEDORES ══ -->
-
+<!-- VENDEDORES -->
 <div class="page" id="page-vendedores">
-  <div class="page-header">
-    <h1>Vendedores</h1>
-    <p>Gestiona tu equipo — comisiones automáticas por rango</p>
-  </div>
-  <!-- Solo admin/supervisor ven esto -->
+  <div class="page-header"><h1>Vendedores</h1><p>Gestiona tu equipo — comisiones automáticas por rango</p></div>
   <div id="sellers-admin-panel">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;padding:16px;background:var(--wine-light);border:1px solid var(--border-strong);border-radius:var(--card-r)">
       <div>
@@ -308,10 +299,7 @@ nav{padding:0 10px;gap:3px}
       <div class="field"><label>Nombre completo</label><input type="text" id="seller-name" placeholder="ej. María García"></div>
       <div class="field"><label>Usuario / PIN</label><input type="text" id="seller-pin" placeholder="ej. maria01"></div>
       <div class="field full"><label>Rol</label>
-        <select id="seller-role">
-          <option value="Vendedor">Vendedor</option>
-          <option value="Supervisor">Supervisor</option>
-        </select>
+        <select id="seller-role"><option value="Vendedor">Vendedor</option><option value="Supervisor">Supervisor</option></select>
       </div>
     </div>
     <div style="margin-top:14px"><button class="btn btn-primary" id="btn-add-seller" onclick="addSeller()">Registrar vendedor</button></div>
@@ -319,8 +307,7 @@ nav{padding:0 10px;gap:3px}
     <div class="commission-box" style="margin-top:16px">
       <h3>Resumen semanal</h3>
       <p>Al registrar el pago se reinician las comisiones semanales. Las ventas totales y el nivel 30% se conservan siempre.</p>
-      <table class="comm-table"><thead><tr><th>Vendedor</th><th>Ventas semana</th><th>Nivel</th><th>Comisión</th></tr></thead>
-      <tbody id="comm-body"></tbody></table>
+      <table class="comm-table"><thead><tr><th>Vendedor</th><th>Ventas semana</th><th>Nivel</th><th>Comisión</th></tr></thead><tbody id="comm-body"></tbody></table>
       <button class="payout-btn" onclick="openPayoutModal()">💸 Registrar pago semanal</button>
     </div>
     <div class="section-sep"><h2>Equipo</h2></div>
@@ -328,21 +315,15 @@ nav{padding:0 10px;gap:3px}
   <div class="sellers-grid" id="sellers-grid" style="margin-top:20px"></div>
 </div>
 
-<!-- ══ VENTAS ══ -->
-
+<!-- VENTAS -->
 <div class="page" id="page-ventas">
-  <div class="page-header">
-    <h1>Ventas</h1>
-    <p>Registra ventas — el inventario y las comisiones se actualizan al instante</p>
-  </div>
+  <div class="page-header"><h1>Ventas</h1><p>Registra ventas — el inventario y las comisiones se actualizan al instante</p></div>
   <div style="background:white;border:1px solid var(--border);border-radius:var(--card-r);padding:24px">
     <div class="form-grid">
-      <div class="field"><label>Vendedor</label>
+      <div class="field" id="sale-seller-wrap"><label>Vendedor</label>
         <select id="sale-seller"><option value="">Selecciona vendedor</option></select>
       </div>
-      <div class="field"><label>Cantidad vendida</label>
-        <input type="number" id="sale-qty" placeholder="1" min="1" value="1">
-      </div>
+      <div class="field"><label>Cantidad vendida</label><input type="number" id="sale-qty" placeholder="1" min="1" value="1"></div>
       <div class="field full product-search">
         <label>Producto</label>
         <input type="text" id="sale-product-input" placeholder="Escribe código o nombre..." autocomplete="off" oninput="filterProductDrop()">
@@ -359,18 +340,16 @@ nav{padding:0 10px;gap:3px}
     </div>
     <div style="margin-top:18px"><button class="btn btn-primary" id="btn-reg-sale" onclick="registerSale()">Registrar venta</button></div>
   </div>
-  <div class="section-sep" style="margin-top:36px"><h2>Historial</h2></div>
+  <div class="section-sep" style="margin-top:36px">
+    <h2>Historial</h2>
+    <button id="btn-clear-history" class="btn btn-ghost btn-sm" style="display:none;border-radius:100px" onclick="clearSalesHistory()">🗑 Borrar historial</button>
+  </div>
   <div class="sales-log" id="sales-log"></div>
 </div>
 
-<!-- ══ PROMOS ══ -->
-
+<!-- PROMOS -->
 <div class="page" id="page-promos">
-  <div class="page-header">
-    <h1>Materiales</h1>
-    <p>Descarga y comparte el contenido promocional de MÜZAY</p>
-  </div>
-  <!-- Solo admin/supervisor ven el panel de subir -->
+  <div class="page-header"><h1>Materiales</h1><p>Descarga y comparte el contenido promocional de MÜZAY</p></div>
   <div id="promos-admin-panel">
     <div class="upload-zone" onclick="document.getElementById('promo-img').click()">
       <span class="upload-icon">🎨</span>
@@ -385,17 +364,66 @@ nav{padding:0 10px;gap:3px}
   <div class="promos-grid" id="promos-grid"></div>
 </div>
 
-<!-- ══ MODALS ══ -->
+<!-- GASTOS -->
+<div class="page" id="page-gastos">
+  <div class="page-header"><h1>Costos & Gastos</h1><p>Control de márgenes, packaging y rentabilidad por producto</p></div>
 
+  <div class="panel-card">
+    <h3>Materiales de packaging</h3>
+    <p class="sub">Se aplican a TODOS los productos. Ingresa el costo total del lote y la cantidad comprada — el sistema calcula el costo unitario y lo suma al margen de cada pieza.</p>
+    <div id="packaging-list"></div>
+    <div class="pkg-total-bar">Costo unitario total de packaging: <strong style="color:var(--wine3);font-size:16px" id="pkg-total-unit">$0.00</strong> por pieza</div>
+    <div class="form-grid" style="margin-top:16px">
+      <div class="field"><label>Material</label><input type="text" id="pkg-name" placeholder="ej. Bolsa de tela"></div>
+      <div class="field"><label>Cantidad comprada</label><input type="number" id="pkg-qty" placeholder="100" min="1"></div>
+      <div class="field"><label>Costo total del lote ($)</label><input type="number" id="pkg-total-cost" placeholder="1800.00" min="0" step="0.01"></div>
+      <div class="field" style="justify-content:flex-end;padding-top:18px">
+        <button class="btn btn-primary btn-sm" onclick="addPackaging()">+ Agregar material</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-card">
+    <h3>Otros gastos</h3>
+    <p class="sub">Gastos generales que quieras registrar (renta, transporte, etc.). Solo informativos.</p>
+    <div id="expenses-list"></div>
+    <div class="form-grid" style="margin-top:16px">
+      <div class="field"><label>Concepto</label><input type="text" id="exp-name" placeholder="ej. Renta del local"></div>
+      <div class="field"><label>Monto ($)</label><input type="number" id="exp-amount" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="field full"><label>Nota (opcional)</label><input type="text" id="exp-note" placeholder="ej. Mensual"></div>
+      <div class="field"><button class="btn btn-primary btn-sm" style="margin-top:4px" onclick="addExpense()">+ Agregar gasto</button></div>
+    </div>
+  </div>
+
+  <div class="panel-card">
+    <h3>Rentabilidad por producto</h3>
+    <p class="sub">Margen calculado con: costo de producción + packaging + comisión promedio del equipo. El costo de producción se edita en cada producto desde Inventario.</p>
+    <div style="overflow-x:auto">
+      <table class="margin-table">
+        <thead><tr>
+          <th style="text-align:left">Producto</th>
+          <th>Precio venta</th><th>Costo prod.</th><th>Packaging</th><th>Comisión</th><th>Costo total</th><th>Margen</th>
+        </tr></thead>
+        <tbody id="margin-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Editar producto -->
 <div class="modal-overlay" id="edit-modal">
   <div class="modal">
     <div class="modal-header"><div class="modal-title">Editar producto</div><button class="close-btn" onclick="closeModal('edit-modal')">✕</button></div>
     <div class="form-grid">
       <div class="field"><label>Código</label><input type="text" id="edit-code" oninput="this.value=this.value.toUpperCase()"></div>
       <div class="field"><label>Nombre</label><input type="text" id="edit-name"></div>
-      <div class="field"><label>Precio ($)</label><input type="number" id="edit-price" min="0" step="0.01"></div>
+      <div class="field"><label>Precio de venta ($)</label><input type="number" id="edit-price" min="0" step="0.01"></div>
       <div class="field"><label>Cantidad</label><input type="number" id="edit-qty" min="0"></div>
       <div class="field full"><label>Descripción</label><input type="text" id="edit-desc"></div>
+      <div class="field full" id="edit-cost-field">
+        <label>Costo de producción por pieza ($) <span style="font-size:10px;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400">(solo admin y supervisor)</span></label>
+        <input type="number" id="edit-cost" min="0" step="0.01" placeholder="0.00">
+      </div>
     </div>
     <input type="hidden" id="edit-id">
     <div style="margin-top:18px;display:flex;gap:10px">
@@ -405,6 +433,7 @@ nav{padding:0 10px;gap:3px}
   </div>
 </div>
 
+<!-- MODAL: Pago semanal -->
 <div class="modal-overlay" id="payout-modal">
   <div class="modal">
     <div class="modal-header"><div class="modal-title">Pago semanal</div><button class="close-btn" onclick="closeModal('payout-modal')">✕</button></div>
@@ -418,210 +447,169 @@ nav{padding:0 10px;gap:3px}
 </div>
 
 <script>
-// ══════════════════════════════════════════════
-//  CONFIGURA TUS CREDENCIALES DE SUPABASE AQUÍ
-// ══════════════════════════════════════════════
-const SUPABASE_URL      = 'https://etiylnanakjnapfystnb.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0aXlsbmFuYWtqbmFwZnlzdG5iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzNTkzMTAsImV4cCI6MjA5MDkzNTMxMH0.ebcLXd2jNVudjduNvH5NRRX_KjxVKbRKcbNEnVCju7U';
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════
+//  TUS CREDENCIALES DE SUPABASE
+// ═══════════════════════════════════════
+const SUPABASE_URL      = 'https://TU_PROJECT_ID.supabase.co';
+const SUPABASE_ANON_KEY = 'TU_ANON_KEY_AQUI';
+// ═══════════════════════════════════════
 
 const { createClient } = supabase;
 const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// ── ADMIN HARDCODED ──
-// Para cambiar el admin: modifica nombre y pin aquí
 const ADMIN = { name: 'Almeida', pin: 'Almeida 23', role: 'Admin' };
 
-// ── SESSION ──
-let currentUser = null; // { name, pin, role, id } — id es null para admin
-let products    = [];
-let sellers     = [];
-let sales       = [];
-let promos      = [];
-let currentProdFile = null;
-let currentProdImg  = null;
-let selectedProduct = null;
+let currentUser    = null;
+let products       = [];
+let sellers        = [];
+let sales          = [];
+let promos         = [];
+let packagingItems = JSON.parse(localStorage.getItem('mz_packaging')||'[]');
+let expenses       = JSON.parse(localStorage.getItem('mz_expenses')||'[]');
+let currentProdFile= null;
+let selectedProduct= null;
 
-// ── ROLE HELPERS ──
-function isAdmin()      { return currentUser?.role === 'Admin'; }
-function isSupervisor() { return currentUser?.role === 'Supervisor' || isAdmin(); }
-function canEdit()      { return isSupervisor(); } // admin + supervisor
+const isAdmin      = () => currentUser?.role === 'Admin';
+const isSupervisor = () => currentUser?.role === 'Supervisor' || isAdmin();
+const canEdit      = () => isSupervisor();
 
-// ── UTILS ──
 function toast(msg, icon='✓'){
   const t = document.createElement('div');
   t.className = 'toast';
   t.innerHTML = `<span>${icon}</span><span>${msg}</span>`;
   document.body.appendChild(t);
-  setTimeout(() => t.remove(), 3000);
+  setTimeout(() => t.remove(), 3200);
 }
-function setBtn(id, disabled, text){
-  const b = document.getElementById(id); if(!b) return;
-  b.disabled = disabled; if(text) b.textContent = text;
-}
+function setBtn(id, dis, txt){ const b=document.getElementById(id); if(!b)return; b.disabled=dis; if(txt)b.textContent=txt; }
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
-function loading(id){ document.getElementById(id).innerHTML = '<div class="loading"><div class="spinner"></div>Cargando...</div>'; }
+function loading(id){ document.getElementById(id).innerHTML='<div class="loading"><div class="spinner"></div>Cargando...</div>'; }
 
 // ── LOGIN ──
 async function doLogin(){
-  const nameVal = document.getElementById('login-name').value.trim();
-  const pinVal  = document.getElementById('login-pin').value.trim();
-  const err     = document.getElementById('login-error');
-  err.classList.remove('show');
-  if(!nameVal || !pinVal){ err.classList.add('show'); return; }
-  setBtn('login-btn', true, 'Verificando...');
-
-  // Checar admin primero
-  if(nameVal.toLowerCase() === ADMIN.name.toLowerCase() && pinVal === ADMIN.pin){
-    currentUser = { name: ADMIN.name, pin: ADMIN.pin, role: 'Admin', id: null };
-    startApp();
-    setBtn('login-btn', false, 'Entrar');
-    return;
+  const nv = document.getElementById('login-name').value.trim();
+  const pv = document.getElementById('login-pin').value.trim();
+  const er = document.getElementById('login-error');
+  er.classList.remove('show');
+  if(!nv||!pv){ er.classList.add('show'); return; }
+  setBtn('login-btn',true,'Verificando...');
+  if(nv.toLowerCase()===ADMIN.name.toLowerCase() && pv===ADMIN.pin){
+    currentUser={...ADMIN,id:null}; startApp(); setBtn('login-btn',false,'Entrar'); return;
   }
-
-  // Buscar en Supabase
-  const { data, error } = await sb.from('sellers')
-    .select('*')
-    .ilike('name', nameVal)
-    .eq('pin', pinVal)
-    .limit(1);
-
-  if(error || !data || data.length === 0){
-    err.classList.add('show');
-    setBtn('login-btn', false, 'Entrar');
-    return;
-  }
-  currentUser = { name: data[0].name, pin: data[0].pin, role: data[0].role, id: data[0].id };
-  startApp();
-  setBtn('login-btn', false, 'Entrar');
+  const {data,error} = await sb.from('sellers').select('*').ilike('name',nv).eq('pin',pv).limit(1);
+  if(error||!data||!data.length){ er.classList.add('show'); setBtn('login-btn',false,'Entrar'); return; }
+  currentUser={name:data[0].name,pin:data[0].pin,role:data[0].role,id:data[0].id};
+  startApp(); setBtn('login-btn',false,'Entrar');
 }
 
 function startApp(){
   document.getElementById('login-screen').classList.add('hidden');
-  document.getElementById('main-nav').style.display = 'flex';
-
-  // Badge de rol
-  const badge = document.getElementById('nav-role-badge');
-  const roleClasses = { Admin:'role-admin', Supervisor:'role-supervisor', Vendedor:'role-vendedor', Cajero:'role-vendedor' };
-  badge.textContent  = currentUser.role;
-  badge.className    = 'nav-role ' + (roleClasses[currentUser.role] || 'role-vendedor');
-  document.getElementById('nav-user-name').textContent = currentUser.name;
-
-  // Mostrar/ocultar paneles según rol
-  const canE = canEdit();
-  document.getElementById('inv-admin-panel').style.display    = canE ? 'block' : 'none';
-  document.getElementById('sellers-admin-panel').style.display= canE ? 'block' : 'none';
-  document.getElementById('promos-admin-panel').style.display = canE ? 'block' : 'none';
-
-  // Ocultar botón de vendedores en nav para vendedores normales
-  // (pueden ver la página pero sin panel de gestión — lo dejamos accesible)
-
-  // Si es vendedor normal, preseleccionar su nombre en ventas
-  loadProducts();
-  loadSellers();
+  document.getElementById('main-nav').style.display='flex';
+  const rc={Admin:'role-admin',Supervisor:'role-supervisor',Vendedor:'role-vendedor',Cajero:'role-vendedor'};
+  const badge=document.getElementById('nav-role-badge');
+  badge.textContent=currentUser.role;
+  badge.className='nav-role '+(rc[currentUser.role]||'role-vendedor');
+  document.getElementById('nav-user-name').textContent=currentUser.name;
+  const e=canEdit();
+  document.getElementById('inv-admin-panel').style.display    =e?'block':'none';
+  document.getElementById('sellers-admin-panel').style.display=e?'block':'none';
+  document.getElementById('promos-admin-panel').style.display =e?'block':'none';
+  document.getElementById('nav-gastos').style.display         =e?'inline-flex':'none';
+  document.getElementById('btn-clear-history').style.display  =e?'inline-flex':'none';
+  loadProducts(); loadSellers();
 }
 
 function doLogout(){
-  currentUser = null;
-  products = []; sellers = []; sales = []; promos = [];
+  currentUser=null; products=[];sellers=[];sales=[];promos=[];
   document.getElementById('login-screen').classList.remove('hidden');
-  document.getElementById('main-nav').style.display = 'none';
-  document.getElementById('login-name').value = '';
-  document.getElementById('login-pin').value  = '';
+  document.getElementById('main-nav').style.display='none';
+  document.getElementById('login-name').value='';
+  document.getElementById('login-pin').value='';
   document.getElementById('login-error').classList.remove('show');
-  // Resetear página activa
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-inventario').classList.add('active');
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector('.nav-btn').classList.add('active');
 }
 
-// ── NAV ──
-function goto(btn, page){
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+function goto(btn,page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('page-'+page).classList.add('active');
   btn.classList.add('active');
   if(page==='inventario') renderProducts();
   if(page==='vendedores'){ renderSellers(); renderCommTable(); }
   if(page==='ventas'){ loadSales(); populateSaleSelects(); }
   if(page==='promos') loadPromos();
+  if(page==='gastos') renderGastos();
 }
 
-// ── COMMISSION LOGIC ──
-function getCommRate(seller){ return (seller.lifetime_sales||0) >= 5 ? 0.30 : 0.15; }
-function weeklyComm(seller){ return (seller.weekly_sales_revenue||0) * getCommRate(seller); }
+const getCommRate = s => (s.lifetime_sales||0)>=5 ? 0.30 : 0.15;
+const weeklyComm  = s => (s.weekly_sales_revenue||0)*getCommRate(s);
 
-// ── IMAGE UPLOAD ──
-async function uploadImage(file, folder){
-  const ext  = file.name.split('.').pop();
-  const path = `${folder}/${Date.now()}.${ext}`;
-  const { error } = await sb.storage.from('muzay-images').upload(path, file, { upsert: true });
+async function uploadImage(file,folder){
+  const ext=file.name.split('.').pop();
+  const path=`${folder}/${Date.now()}.${ext}`;
+  const {error}=await sb.storage.from('muzay-images').upload(path,file,{upsert:true});
   if(error) throw error;
-  const { data } = sb.storage.from('muzay-images').getPublicUrl(path);
-  return data.publicUrl;
+  return sb.storage.from('muzay-images').getPublicUrl(path).data.publicUrl;
 }
 
 // ── PRODUCTS ──
 function previewProd(e){
-  const f = e.target.files[0]; if(!f) return;
-  currentProdFile = f;
-  const r = new FileReader();
-  r.onload = ev => {
-    currentProdImg = ev.target.result;
-    const img = document.getElementById('prod-preview');
-    img.src = ev.target.result; img.classList.add('show');
-    document.getElementById('upload-emoji').textContent = '✅';
+  const f=e.target.files[0]; if(!f) return;
+  currentProdFile=f;
+  const r=new FileReader();
+  r.onload=ev=>{
+    document.getElementById('prod-preview').src=ev.target.result;
+    document.getElementById('prod-preview').classList.add('show');
+    document.getElementById('upload-emoji').textContent='✅';
   };
   r.readAsDataURL(f);
 }
 
 async function addProduct(){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const code  = document.getElementById('prod-code').value.trim();
-  const name  = document.getElementById('prod-name').value.trim();
-  const price = parseFloat(document.getElementById('prod-price').value) || 0;
-  const qty   = parseInt(document.getElementById('prod-qty').value) || 0;
-  const desc  = document.getElementById('prod-desc').value.trim();
-  if(!code || !name){ toast('Ingresa código y nombre','⚠️'); return; }
-  setBtn('btn-add-prod', true, 'Guardando...');
-  try {
-    let img_url = null;
-    if(currentProdFile) img_url = await uploadImage(currentProdFile, 'products');
-    const { error } = await sb.from('products').insert([{ code, name, price, qty, description: desc, img_url }]);
-    if(error){ toast(error.message,'❌'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const code =document.getElementById('prod-code').value.trim();
+  const name =document.getElementById('prod-name').value.trim();
+  const price=parseFloat(document.getElementById('prod-price').value)||0;
+  const qty  =parseInt(document.getElementById('prod-qty').value)||0;
+  const desc =document.getElementById('prod-desc').value.trim();
+  if(!code||!name){toast('Ingresa código y nombre','⚠️');return;}
+  setBtn('btn-add-prod',true,'Guardando...');
+  try{
+    let img_url=null;
+    if(currentProdFile) img_url=await uploadImage(currentProdFile,'products');
+    const {error}=await sb.from('products').insert([{code,name,price,qty,description:desc,img_url,production_cost:0}]);
+    if(error){toast(error.message,'❌');return;}
     clearProdForm(); await loadProducts(); toast(`${code} agregado`);
-  } catch(err){ toast(err.message,'❌'); }
-  finally{ setBtn('btn-add-prod', false, 'Agregar producto'); }
+  }catch(err){toast(err.message,'❌');}
+  finally{setBtn('btn-add-prod',false,'Agregar producto');}
 }
 
 function clearProdForm(){
-  ['prod-code','prod-name','prod-price','prod-qty','prod-desc'].forEach(id => document.getElementById(id).value='');
+  ['prod-code','prod-name','prod-price','prod-qty','prod-desc'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('prod-preview').classList.remove('show');
-  document.getElementById('upload-emoji').textContent = '📷';
-  currentProdImg = null; currentProdFile = null;
+  document.getElementById('upload-emoji').textContent='📷';
+  currentProdFile=null;
 }
 
 async function loadProducts(){
   loading('products-grid');
-  const { data, error } = await sb.from('products').select('*').order('created_at', { ascending: false });
-  if(error){ toast(error.message,'❌'); return; }
-  products = data; renderProducts();
+  const {data,error}=await sb.from('products').select('*').order('created_at',{ascending:false});
+  if(error){toast(error.message,'❌');return;}
+  products=data; renderProducts();
 }
 
 function renderProducts(){
-  const q    = document.getElementById('inv-search').value.toLowerCase();
-  const grid = document.getElementById('products-grid');
-  const list = products.filter(p => !q || p.code.toLowerCase().includes(q) || p.name.toLowerCase().includes(q));
-  if(!list.length){
-    grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📦</div><p>No hay productos todavía</p></div>';
-    return;
-  }
-  const showActions = canEdit();
-  grid.innerHTML = list.map(p => {
-    const b  = p.qty===0?'qty-out':p.qty<=5?'qty-low':'qty-ok';
-    const bt = p.qty===0?'Agotado':p.qty<=5?'Stock bajo':'Disponible';
-    return `<div class="product-card">
+  const q=document.getElementById('inv-search').value.toLowerCase();
+  const grid=document.getElementById('products-grid');
+  const list=products.filter(p=>!q||p.code.toLowerCase().includes(q)||p.name.toLowerCase().includes(q));
+  if(!list.length){grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📦</div><p>No hay productos todavía</p></div>';return;}
+  const sa=canEdit();
+  grid.innerHTML=list.map(p=>{
+    const b=p.qty===0?'qty-out':p.qty<=5?'qty-low':'qty-ok';
+    const bt=p.qty===0?'Agotado':p.qty<=5?'Stock bajo':'Disponible';
+    return`<div class="product-card">
       ${p.img_url?`<img src="${p.img_url}" alt="${p.name}">`:`<div class="no-img">📦</div>`}
       <div class="card-info">
         <div class="card-code">${p.code}</div>
@@ -631,142 +619,133 @@ function renderProducts(){
           <span class="qty-badge ${b}">×${p.qty} ${bt}</span>
         </div>
       </div>
-      ${showActions ? `<div class="card-actions">
+      ${sa?`<div class="card-actions">
         <button class="btn btn-outline btn-sm" style="flex:1" onclick="openEdit(${p.id})">Editar</button>
         <button class="btn btn-ghost btn-sm" onclick="deleteProduct(${p.id})">🗑</button>
-      </div>` : ''}
+      </div>`:''}
     </div>`;
   }).join('');
 }
 
 async function deleteProduct(id){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  if(!confirm('¿Eliminar este producto?')) return;
-  const { error } = await sb.from('products').delete().eq('id', id);
-  if(error){ toast(error.message,'❌'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  if(!confirm('¿Eliminar este producto?'))return;
+  const {error}=await sb.from('products').delete().eq('id',id);
+  if(error){toast(error.message,'❌');return;}
   await loadProducts(); toast('Eliminado','🗑');
 }
 
 function openEdit(id){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const p = products.find(x => x.id===id); if(!p) return;
-  document.getElementById('edit-id').value    = id;
-  document.getElementById('edit-code').value  = p.code;
-  document.getElementById('edit-name').value  = p.name;
-  document.getElementById('edit-price').value = p.price;
-  document.getElementById('edit-qty').value   = p.qty;
-  document.getElementById('edit-desc').value  = p.description||'';
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const p=products.find(x=>x.id===id); if(!p)return;
+  document.getElementById('edit-id').value   =id;
+  document.getElementById('edit-code').value =p.code;
+  document.getElementById('edit-name').value =p.name;
+  document.getElementById('edit-price').value=p.price;
+  document.getElementById('edit-qty').value  =p.qty;
+  document.getElementById('edit-desc').value =p.description||'';
+  document.getElementById('edit-cost').value =p.production_cost||0;
   document.getElementById('edit-modal').classList.add('open');
 }
 
 async function saveEdit(){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const id    = parseInt(document.getElementById('edit-id').value);
-  const code  = document.getElementById('edit-code').value.trim().toUpperCase();
-  const name  = document.getElementById('edit-name').value.trim();
-  const price = parseFloat(document.getElementById('edit-price').value)||0;
-  const qty   = parseInt(document.getElementById('edit-qty').value)||0;
-  const desc  = document.getElementById('edit-desc').value.trim();
-  const { error } = await sb.from('products').update({ code, name, price, qty, description: desc }).eq('id', id);
-  if(error){ toast(error.message,'❌'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const id   =parseInt(document.getElementById('edit-id').value);
+  const code =document.getElementById('edit-code').value.trim().toUpperCase();
+  const name =document.getElementById('edit-name').value.trim();
+  const price=parseFloat(document.getElementById('edit-price').value)||0;
+  const qty  =parseInt(document.getElementById('edit-qty').value)||0;
+  const desc =document.getElementById('edit-desc').value.trim();
+  const cost =parseFloat(document.getElementById('edit-cost').value)||0;
+  const {error}=await sb.from('products').update({code,name,price,qty,description:desc,production_cost:cost}).eq('id',id);
+  if(error){toast(error.message,'❌');return;}
   closeModal('edit-modal'); await loadProducts(); toast('Actualizado');
 }
 
 // ── SELLERS ──
 async function addSeller(){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const name = document.getElementById('seller-name').value.trim();
-  const pin  = document.getElementById('seller-pin').value.trim();
-  const role = document.getElementById('seller-role').value;
-  if(!name||!pin){ toast('Ingresa nombre y usuario','⚠️'); return; }
-  // Evitar duplicar el admin
-  if(name.toLowerCase()===ADMIN.name.toLowerCase()){ toast('Ese nombre está reservado','⚠️'); return; }
-  setBtn('btn-add-seller', true, 'Guardando...');
-  const { error } = await sb.from('sellers').insert([{ name, pin, role }]);
-  if(error){ toast(error.message||'El usuario ya existe','❌'); setBtn('btn-add-seller',false,'Registrar vendedor'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const name=document.getElementById('seller-name').value.trim();
+  const pin =document.getElementById('seller-pin').value.trim();
+  const role=document.getElementById('seller-role').value;
+  if(!name||!pin){toast('Ingresa nombre y usuario','⚠️');return;}
+  if(name.toLowerCase()===ADMIN.name.toLowerCase()){toast('Ese nombre está reservado','⚠️');return;}
+  setBtn('btn-add-seller',true,'Guardando...');
+  const {error}=await sb.from('sellers').insert([{name,pin,role}]);
+  if(error){toast(error.message||'El usuario ya existe','❌');setBtn('btn-add-seller',false,'Registrar vendedor');return;}
   document.getElementById('seller-name').value='';
   document.getElementById('seller-pin').value='';
   await loadSellers(); toast(`${name} registrado`);
-  setBtn('btn-add-seller', false, 'Registrar vendedor');
+  setBtn('btn-add-seller',false,'Registrar vendedor');
 }
 
 async function loadSellers(){
-  const { data, error } = await sb.from('sellers').select('*').order('created_at', { ascending: true });
-  if(error){ toast(error.message,'❌'); return; }
-  sellers = data;
-  renderSellers(); renderCommTable(); populateSaleSelects();
+  const {data,error}=await sb.from('sellers').select('*').order('created_at',{ascending:true});
+  if(error){toast(error.message,'❌');return;}
+  sellers=data; renderSellers(); renderCommTable(); populateSaleSelects();
 }
 
 function renderSellers(){
-  const grid = document.getElementById('sellers-grid');
-  if(!sellers.length){
-    grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">👥</div><p>No hay vendedores registrados</p></div>';
-    return;
-  }
-  const showDelete = canEdit();
-  grid.innerHTML = sellers.map(s => {
-    const isSenior   = (s.lifetime_sales||0) >= 5;
-    const tierClass  = isSenior?'tier-full':'tier-base';
-    const badgeClass = isSenior?'tier-badge-full':'tier-badge-base';
-    const tierText   = isSenior?'30% comisión permanente':`15% — ${5-(s.lifetime_sales||0)} ventas para subir`;
-    const badgeText  = isSenior?'Senior 30%':'Nivel inicial 15%';
-    const comm = weeklyComm(s);
-    const initials = s.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
-    return `<div class="seller-card">
+  const grid=document.getElementById('sellers-grid');
+  if(!sellers.length){grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">👥</div><p>No hay vendedores registrados</p></div>';return;}
+  const sd=canEdit();
+  grid.innerHTML=sellers.map(s=>{
+    const isSr=(s.lifetime_sales||0)>=5;
+    const tc=isSr?'tier-full':'tier-base';
+    const bc=isSr?'tier-badge-full':'tier-badge-base';
+    const tt=isSr?'30% comisión permanente':`15% — ${5-(s.lifetime_sales||0)} ventas para subir`;
+    const bt=isSr?'Senior 30%':'Nivel inicial 15%';
+    const comm=weeklyComm(s);
+    const ini=s.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    return`<div class="seller-card">
       <div class="seller-info-row">
-        <div class="seller-avatar">${initials}</div>
-        <div>
-          <div class="seller-name-txt">${s.name}</div>
-          <div class="seller-role-txt">${s.role} · @${s.pin}</div>
-        </div>
+        <div class="seller-avatar">${ini}</div>
+        <div><div class="seller-name-txt">${s.name}</div><div class="seller-role-txt">${s.role} · @${s.pin}</div></div>
       </div>
       <div class="seller-stats">
         <div class="stat"><div class="stat-val">${s.lifetime_sales||0}</div><div class="stat-label">Piezas totales</div></div>
         <div class="stat"><div class="stat-val">${s.weekly_sales||0}</div><div class="stat-label">Esta semana</div></div>
         <div class="stat"><div class="stat-val">$${comm.toFixed(0)}</div><div class="stat-label">Comisión</div></div>
       </div>
-      <div class="commission-tier ${tierClass}">
-        <span class="tier-badge ${badgeClass}">${badgeText}</span>
-        <span style="font-size:11px">${tierText}</span>
+      <div class="commission-tier ${tc}">
+        <span class="tier-badge ${bc}">${bt}</span>
+        <span style="font-size:11px">${tt}</span>
       </div>
-      ${showDelete?`<div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="deleteSeller(${s.id})">Eliminar</button></div>`:''}
+      ${sd?`<div><button class="btn btn-ghost btn-sm" onclick="deleteSeller(${s.id})">Eliminar</button></div>`:''}
     </div>`;
   }).join('');
 }
 
 function renderCommTable(){
-  const body = document.getElementById('comm-body');
-  if(!sellers.length){ body.innerHTML='<tr><td colspan="4" style="text-align:center;padding:16px;color:var(--muted);font-size:13px">Sin vendedores</td></tr>'; return; }
-  body.innerHTML = sellers.map(s => {
-    const comm = weeklyComm(s);
-    const rate = getCommRate(s);
-    const isSenior = (s.lifetime_sales||0) >= 5;
-    return `<tr>
+  const body=document.getElementById('comm-body');
+  if(!sellers.length){body.innerHTML='<tr><td colspan="4" style="text-align:center;padding:16px;color:var(--muted);font-size:13px">Sin vendedores</td></tr>';return;}
+  body.innerHTML=sellers.map(s=>{
+    const comm=weeklyComm(s); const rate=getCommRate(s); const isSr=(s.lifetime_sales||0)>=5;
+    return`<tr>
       <td style="font-weight:500;color:var(--wine3)">${s.name}</td>
       <td>${s.weekly_sales||0} piezas</td>
-      <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;${isSenior?'background:rgba(20,120,60,0.1);color:#146b3a':'background:var(--wine-mid);color:var(--wine)'}">${(rate*100).toFixed(0)}%</span></td>
+      <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;${isSr?'background:rgba(20,120,60,0.1);color:#146b3a':'background:var(--wine-mid);color:var(--wine)'}">${(rate*100).toFixed(0)}%</span></td>
       <td class="comm-amount">$${comm.toFixed(2)}</td>
     </tr>`;
   }).join('');
 }
 
 async function deleteSeller(id){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  if(!confirm('¿Eliminar este vendedor?')) return;
-  const { error } = await sb.from('sellers').delete().eq('id', id);
-  if(error){ toast(error.message,'❌'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  if(!confirm('¿Eliminar este vendedor?'))return;
+  const {error}=await sb.from('sellers').delete().eq('id',id);
+  if(error){toast(error.message,'❌');return;}
   await loadSellers(); toast('Vendedor eliminado','🗑');
 }
 
 function openPayoutModal(){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const preview = document.getElementById('payout-preview');
-  const total   = sellers.reduce((a,s) => a + weeklyComm(s), 0);
-  preview.innerHTML = sellers.map(s =>
-    `<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--cream3);border-radius:10px;font-size:13px">
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const total=sellers.reduce((a,s)=>a+weeklyComm(s),0);
+  document.getElementById('payout-preview').innerHTML=
+    sellers.map(s=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--cream3);border-radius:10px;font-size:13px">
       <span style="font-weight:500;color:var(--wine3)">${s.name}</span>
       <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--wine)">$${weeklyComm(s).toFixed(2)}</span>
-    </div>`).join('') +
+    </div>`).join('')+
     `<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--wine);border-radius:10px;margin-top:4px">
       <span style="color:var(--cream);font-weight:600;font-size:13px">TOTAL A PAGAR</span>
       <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--cream2)">$${total.toFixed(2)}</span>
@@ -775,114 +754,106 @@ function openPayoutModal(){
 }
 
 async function executePayout(){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  setBtn('btn-payout', true, 'Procesando...');
-  await Promise.all(sellers.map(s =>
-    sb.from('sellers').update({ weekly_sales: 0, weekly_sales_revenue: 0 }).eq('id', s.id)
-  ));
-  closeModal('payout-modal');
-  await loadSellers();
-  toast('Comisiones pagadas — contadores semanales reiniciados','💸');
-  setBtn('btn-payout', false, 'Confirmar y limpiar');
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  setBtn('btn-payout',true,'Procesando...');
+  await Promise.all(sellers.map(s=>sb.from('sellers').update({weekly_sales:0,weekly_sales_revenue:0}).eq('id',s.id)));
+  closeModal('payout-modal'); await loadSellers();
+  toast('Comisiones pagadas — contadores reiniciados','💸');
+  setBtn('btn-payout',false,'Confirmar y limpiar');
 }
 
 // ── SALES ──
 function populateSaleSelects(){
-  const sel  = document.getElementById('sale-seller');
-  const curr = sel.value;
-  sel.innerHTML = '<option value="">Selecciona vendedor</option>' +
-    sellers.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
-  // Preseleccionar al vendedor actual si aplica
-  if(currentUser?.id){
-    sel.value = currentUser.id;
-  } else {
-    sel.value = curr;
+  const sel =document.getElementById('sale-seller');
+  const wrap=document.getElementById('sale-seller-wrap');
+  if(!canEdit()&&currentUser?.id){
+    wrap.style.display='none';
+    sel.innerHTML=`<option value="${currentUser.id}" selected>${currentUser.name}</option>`;
+  }else{
+    wrap.style.display='block';
+    const curr=sel.value;
+    sel.innerHTML='<option value="">Selecciona vendedor</option>'+sellers.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+    sel.value=curr;
   }
 }
 
 function filterProductDrop(){
-  const q    = document.getElementById('sale-product-input').value.toLowerCase();
-  const drop = document.getElementById('product-drop');
-  selectedProduct = null;
+  const q   =document.getElementById('sale-product-input').value.toLowerCase();
+  const drop=document.getElementById('product-drop');
+  selectedProduct=null;
   document.getElementById('sale-product-preview').classList.remove('show');
-  if(!q){ drop.classList.remove('open'); return; }
-  const matches = products.filter(p => p.code.toLowerCase().includes(q)||p.name.toLowerCase().includes(q)).slice(0,8);
-  if(!matches.length){ drop.classList.remove('open'); return; }
-  drop.innerHTML = matches.map(p =>
-    `<div class="pd-item" onclick="selectProduct(${p.id})">
-      <div><div class="pd-code">${p.code}</div><div>${p.name}</div></div>
-      <div style="font-size:12px;color:${p.qty>0?'#146b3a':'var(--wine)'}">×${p.qty}</div>
-    </div>`).join('');
+  if(!q){drop.classList.remove('open');return;}
+  const m=products.filter(p=>p.code.toLowerCase().includes(q)||p.name.toLowerCase().includes(q)).slice(0,8);
+  if(!m.length){drop.classList.remove('open');return;}
+  drop.innerHTML=m.map(p=>`<div class="pd-item" onclick="selectProduct(${p.id})">
+    <div><div class="pd-code">${p.code}</div><div>${p.name}</div></div>
+    <div style="font-size:12px;color:${p.qty>0?'#146b3a':'var(--wine)'}">×${p.qty}</div>
+  </div>`).join('');
   drop.classList.add('open');
 }
 
 function selectProduct(id){
-  selectedProduct = products.find(p => p.id===id); if(!selectedProduct) return;
-  document.getElementById('sale-product-input').value = `${selectedProduct.code} — ${selectedProduct.name}`;
+  selectedProduct=products.find(p=>p.id===id); if(!selectedProduct)return;
+  document.getElementById('sale-product-input').value=`${selectedProduct.code} — ${selectedProduct.name}`;
   document.getElementById('product-drop').classList.remove('open');
-  document.getElementById('spp-img').src   = selectedProduct.img_url||'';
-  document.getElementById('spp-code').textContent  = selectedProduct.code;
-  document.getElementById('spp-name').textContent  = selectedProduct.name;
-  document.getElementById('spp-stock').textContent = `Stock: ${selectedProduct.qty} piezas · $${parseFloat(selectedProduct.price).toFixed(2)} c/u`;
+  document.getElementById('spp-img').src          =selectedProduct.img_url||'';
+  document.getElementById('spp-code').textContent =selectedProduct.code;
+  document.getElementById('spp-name').textContent =selectedProduct.name;
+  document.getElementById('spp-stock').textContent=`Stock: ${selectedProduct.qty} piezas · $${parseFloat(selectedProduct.price).toFixed(2)} c/u`;
   document.getElementById('sale-product-preview').classList.add('show');
 }
 
 async function registerSale(){
-  const sellerId = parseInt(document.getElementById('sale-seller').value);
-  const qty      = parseInt(document.getElementById('sale-qty').value)||1;
-  if(!sellerId){ toast('Selecciona un vendedor','⚠️'); return; }
-  if(!selectedProduct){ toast('Selecciona un producto','⚠️'); return; }
-  if(qty < 1){ toast('Cantidad mínima: 1','⚠️'); return; }
-  if(selectedProduct.qty < qty){ toast(`Solo hay ${selectedProduct.qty} piezas de ${selectedProduct.code}`,'⚠️'); return; }
-
-  setBtn('btn-reg-sale', true, 'Registrando...');
-  const seller  = sellers.find(s => s.id===sellerId);
-  const revenue = parseFloat(selectedProduct.price) * qty;
-  const prodCode = selectedProduct.code;
-
-  try {
-    const { error: e1 } = await sb.from('products').update({ qty: selectedProduct.qty - qty }).eq('id', selectedProduct.id);
-    if(e1) throw e1;
-    const { error: e2 } = await sb.from('sellers').update({
-      lifetime_sales:       (seller.lifetime_sales||0) + qty,
-      lifetime_revenue:     (seller.lifetime_revenue||0) + revenue,
-      weekly_sales:         (seller.weekly_sales||0) + qty,
-      weekly_sales_revenue: (seller.weekly_sales_revenue||0) + revenue
-    }).eq('id', sellerId);
-    if(e2) throw e2;
-    const { error: e3 } = await sb.from('sales').insert([{
-      seller_id: sellerId, seller_name: seller.name,
-      product_id: selectedProduct.id, product_code: selectedProduct.code,
-      product_name: selectedProduct.name, qty,
-      price: selectedProduct.price, total: revenue
+  const sellerId=parseInt(document.getElementById('sale-seller').value);
+  const qty     =parseInt(document.getElementById('sale-qty').value)||1;
+  if(!sellerId){toast('Selecciona un vendedor','⚠️');return;}
+  if(!selectedProduct){toast('Selecciona un producto','⚠️');return;}
+  if(qty<1){toast('Cantidad mínima: 1','⚠️');return;}
+  if(selectedProduct.qty<qty){toast(`Solo hay ${selectedProduct.qty} piezas de ${selectedProduct.code}`,'⚠️');return;}
+  setBtn('btn-reg-sale',true,'Registrando...');
+  const seller  =sellers.find(s=>s.id===sellerId);
+  const revenue =parseFloat(selectedProduct.price)*qty;
+  const prodCode=selectedProduct.code;
+  try{
+    const {error:e1}=await sb.from('products').update({qty:selectedProduct.qty-qty}).eq('id',selectedProduct.id);
+    if(e1)throw e1;
+    const {error:e2}=await sb.from('sellers').update({
+      lifetime_sales:      (seller.lifetime_sales||0)+qty,
+      lifetime_revenue:    (seller.lifetime_revenue||0)+revenue,
+      weekly_sales:        (seller.weekly_sales||0)+qty,
+      weekly_sales_revenue:(seller.weekly_sales_revenue||0)+revenue
+    }).eq('id',sellerId);
+    if(e2)throw e2;
+    const {error:e3}=await sb.from('sales').insert([{
+      seller_id:sellerId,seller_name:seller.name,
+      product_id:selectedProduct.id,product_code:selectedProduct.code,
+      product_name:selectedProduct.name,qty,price:selectedProduct.price,total:revenue
     }]);
-    if(e3) throw e3;
-
-    selectedProduct = null;
+    if(e3)throw e3;
+    selectedProduct=null;
     document.getElementById('sale-product-input').value='';
     document.getElementById('sale-qty').value='1';
     document.getElementById('sale-product-preview').classList.remove('show');
-    await Promise.all([loadProducts(), loadSellers(), loadSales()]);
-    // Reseleccionar vendedor actual
-    if(currentUser?.id) document.getElementById('sale-seller').value = currentUser.id;
+    await Promise.all([loadProducts(),loadSellers(),loadSales()]);
+    if(!canEdit()&&currentUser?.id) document.getElementById('sale-seller').value=currentUser.id;
     toast(`Venta: ${qty}× ${prodCode} — $${revenue.toFixed(2)}`,'💳');
-  } catch(err){ toast(err.message,'❌'); }
-  finally{ setBtn('btn-reg-sale', false, 'Registrar venta'); }
+  }catch(err){toast(err.message,'❌');}
+  finally{setBtn('btn-reg-sale',false,'Registrar venta');}
 }
 
 async function loadSales(){
   loading('sales-log');
-  const { data, error } = await sb.from('sales').select('*').order('created_at',{ ascending:false }).limit(60);
-  if(error){ toast(error.message,'❌'); return; }
-  sales = data; renderSalesLog();
+  const {data,error}=await sb.from('sales').select('*').order('created_at',{ascending:false}).limit(80);
+  if(error){toast(error.message,'❌');return;}
+  sales=data; renderSalesLog();
 }
 
 function renderSalesLog(){
-  const log = document.getElementById('sales-log');
-  if(!sales.length){ log.innerHTML='<div class="empty"><div class="empty-icon">📋</div><p>Sin ventas registradas</p></div>'; return; }
-  log.innerHTML = sales.map(s => {
-    const date = new Date(s.created_at).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'});
-    return `<div class="sale-item">
+  const log=document.getElementById('sales-log');
+  if(!sales.length){log.innerHTML='<div class="empty"><div class="empty-icon">📋</div><p>Sin ventas registradas</p></div>';return;}
+  log.innerHTML=sales.map(s=>{
+    const date=new Date(s.created_at).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'});
+    return`<div class="sale-item">
       <span class="sale-code">${s.product_code}</span>
       <span class="sale-name">${s.product_name}</span>
       <span class="sale-qty">×${s.qty}</span>
@@ -893,72 +864,163 @@ function renderSalesLog(){
   }).join('');
 }
 
+async function clearSalesHistory(){
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  if(!confirm('¿Borrar TODO el historial de ventas? Esta acción no se puede deshacer.'))return;
+  const {error}=await sb.from('sales').delete().neq('id',0);
+  if(error){toast(error.message,'❌');return;}
+  await loadSales(); toast('Historial borrado','🗑');
+}
+
 // ── PROMOS ──
 async function addPromos(e){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const title = document.getElementById('promo-title').value.trim()||'Material MÜZAY';
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const title=document.getElementById('promo-title').value.trim()||'Material MÜZAY';
   for(const f of Array.from(e.target.files)){
-    try {
-      const img_url = await uploadImage(f, 'promos');
-      const { error } = await sb.from('promos').insert([{ title, img_url }]);
-      if(error) throw error;
+    try{
+      const img_url=await uploadImage(f,'promos');
+      const {error}=await sb.from('promos').insert([{title,img_url}]);
+      if(error)throw error;
       toast('Material subido','🎨');
-    } catch(err){ toast(err.message,'❌'); }
+    }catch(err){toast(err.message,'❌');}
   }
-  e.target.value='';
-  await loadPromos();
+  e.target.value=''; await loadPromos();
 }
 
 async function loadPromos(){
   loading('promos-grid');
-  const { data, error } = await sb.from('promos').select('*').order('created_at',{ascending:false});
-  if(error){ toast(error.message,'❌'); return; }
-  promos = data; renderPromos();
+  const {data,error}=await sb.from('promos').select('*').order('created_at',{ascending:false});
+  if(error){toast(error.message,'❌');return;}
+  promos=data; renderPromos();
 }
 
 function renderPromos(){
-  const grid = document.getElementById('promos-grid');
-  if(!promos.length){ grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🎨</div><p>Sin materiales todavía</p></div>'; return; }
-  const showDelete = canEdit();
-  grid.innerHTML = promos.map(p => {
-    const date = new Date(p.created_at).toLocaleDateString('es-MX');
-    return `<div class="promo-card">
+  const grid=document.getElementById('promos-grid');
+  if(!promos.length){grid.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🎨</div><p>Sin materiales todavía</p></div>';return;}
+  const sd=canEdit();
+  grid.innerHTML=promos.map(p=>{
+    const date=new Date(p.created_at).toLocaleDateString('es-MX');
+    return`<div class="promo-card">
       ${p.img_url?`<img src="${p.img_url}" alt="${p.title}">`:`<div class="promo-no-img">🎨</div>`}
       <div class="promo-info">
         <div class="promo-title-text">${p.title}</div>
         <div class="promo-date">${date}</div>
         <a class="download-btn" href="${p.img_url}" download="${p.title}" target="_blank">⬇ Descargar</a>
-        ${showDelete?`<button class="btn btn-ghost btn-sm" style="width:100%;margin-top:6px;border-radius:100px" onclick="deletePromo(${p.id})">Eliminar</button>`:''}
+        ${sd?`<button class="btn btn-ghost btn-sm" style="width:100%;margin-top:6px;border-radius:100px" onclick="deletePromo(${p.id})">Eliminar</button>`:''}
       </div>
     </div>`;
   }).join('');
 }
 
 async function deletePromo(id){
-  if(!canEdit()){ toast('Sin permisos','🚫'); return; }
-  const { error } = await sb.from('promos').delete().eq('id', id);
-  if(error){ toast(error.message,'❌'); return; }
+  if(!canEdit()){toast('Sin permisos','🚫');return;}
+  const {error}=await sb.from('promos').delete().eq('id',id);
+  if(error){toast(error.message,'❌');return;}
   await loadPromos(); toast('Eliminado','🗑');
 }
 
+// ── GASTOS ──
+const pkgUnitTotal=()=>packagingItems.reduce((a,p)=>a+p.unitCost,0);
+function saveGastos(){
+  localStorage.setItem('mz_packaging',JSON.stringify(packagingItems));
+  localStorage.setItem('mz_expenses', JSON.stringify(expenses));
+}
+
+function addPackaging(){
+  const name=document.getElementById('pkg-name').value.trim();
+  const qty =parseInt(document.getElementById('pkg-qty').value)||0;
+  const tc  =parseFloat(document.getElementById('pkg-total-cost').value)||0;
+  if(!name||qty<=0||tc<=0){toast('Completa todos los campos','⚠️');return;}
+  packagingItems.push({id:Date.now(),name,qty,totalCost:tc,unitCost:tc/qty});
+  saveGastos();
+  ['pkg-name','pkg-qty','pkg-total-cost'].forEach(id=>document.getElementById(id).value='');
+  renderGastos(); toast(`${name} — $${(tc/qty).toFixed(2)}/pieza`);
+}
+
+function deletePackaging(id){ packagingItems=packagingItems.filter(p=>p.id!==id); saveGastos(); renderGastos(); }
+
+function addExpense(){
+  const name  =document.getElementById('exp-name').value.trim();
+  const amount=parseFloat(document.getElementById('exp-amount').value)||0;
+  const note  =document.getElementById('exp-note').value.trim();
+  if(!name||amount<=0){toast('Ingresa concepto y monto','⚠️');return;}
+  expenses.push({id:Date.now(),name,amount,note});
+  saveGastos();
+  ['exp-name','exp-amount','exp-note'].forEach(id=>document.getElementById(id).value='');
+  renderGastos(); toast('Gasto registrado');
+}
+
+function deleteExpense(id){ expenses=expenses.filter(e=>e.id!==id); saveGastos(); renderGastos(); }
+
+function renderGastos(){
+  const pkgList=document.getElementById('packaging-list');
+  pkgList.innerHTML=packagingItems.length
+    ? packagingItems.map(p=>`<div class="list-row">
+        <span class="lname">${p.name}</span>
+        <span class="lmeta">${p.qty} uds · $${p.totalCost.toFixed(2)} total</span>
+        <span class="lval">$${p.unitCost.toFixed(2)}/u</span>
+        <button class="ldel" onclick="deletePackaging(${p.id})">🗑</button>
+      </div>`).join('')
+    : '<p style="font-size:13px;color:var(--muted);padding:8px 0">Sin materiales registrados</p>';
+  document.getElementById('pkg-total-unit').textContent=`$${pkgUnitTotal().toFixed(2)}`;
+
+  const expList=document.getElementById('expenses-list');
+  expList.innerHTML=expenses.length
+    ? expenses.map(e=>`<div class="list-row">
+        <span class="lname">${e.name}</span>
+        ${e.note?`<span class="lmeta">${e.note}</span>`:''}
+        <span class="lval">$${e.amount.toFixed(2)}</span>
+        <button class="ldel" onclick="deleteExpense(${e.id})">🗑</button>
+      </div>`).join('')
+    : '<p style="font-size:13px;color:var(--muted);padding:8px 0">Sin gastos registrados</p>';
+
+  const body   =document.getElementById('margin-body');
+  const pkgCost=pkgUnitTotal();
+  const avgRate=sellers.length ? sellers.reduce((a,s)=>a+getCommRate(s),0)/sellers.length : 0.15;
+  if(!products.length){body.innerHTML='<tr><td colspan="7" style="text-align:center;padding:16px;color:var(--muted)">Sin productos en inventario</td></tr>';return;}
+  body.innerHTML=products.map(p=>{
+    const price   =parseFloat(p.price)||0;
+    const prodCost=parseFloat(p.production_cost)||0;
+    const commCost=price*avgRate;
+    const total   =prodCost+pkgCost+commCost;
+    const margin  =price-total;
+    const pct     =price>0?(margin/price*100):0;
+    const col     =margin>=0?'#146b3a':'var(--wine)';
+    return`<tr>
+      <td>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--wine3)">${p.name}</div>
+        <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">${p.code}</div>
+      </td>
+      <td style="font-weight:600">$${price.toFixed(2)}</td>
+      <td style="color:var(--muted)">$${prodCost.toFixed(2)}</td>
+      <td style="color:var(--muted)">$${pkgCost.toFixed(2)}</td>
+      <td style="color:var(--muted)">$${commCost.toFixed(2)}</td>
+      <td style="color:var(--wine)">$${total.toFixed(2)}</td>
+      <td>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:${col}">$${margin.toFixed(2)}</span>
+        <div style="font-size:10px;color:${col}">${pct.toFixed(1)}%</div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
 // ── DRAG & DROP ──
-const dz = document.getElementById('dropzone');
-dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag'); });
-dz.addEventListener('dragleave', () => dz.classList.remove('drag'));
-dz.addEventListener('drop', e => {
-  e.preventDefault(); dz.classList.remove('drag');
-  const f = e.dataTransfer.files[0];
-  if(f && f.type.startsWith('image/')){
-    const inp = document.getElementById('prod-img');
-    const dt = new DataTransfer(); dt.items.add(f); inp.files = dt.files;
-    previewProd({ target: inp });
+const dz=document.getElementById('dropzone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
+dz.addEventListener('drop',e=>{
+  e.preventDefault();dz.classList.remove('drag');
+  const f=e.dataTransfer.files[0];
+  if(f&&f.type.startsWith('image/')){
+    const inp=document.getElementById('prod-img');
+    const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;
+    previewProd({target:inp});
   }
 });
 
-document.querySelectorAll('.modal-overlay').forEach(o =>
-  o.addEventListener('click', e => { if(e.target===o) o.classList.remove('open'); })
+document.querySelectorAll('.modal-overlay').forEach(o=>
+  o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open');})
 );
 </script>
-
 </body>
 </html>
